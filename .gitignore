@@ -1,0 +1,20 @@
+# Real phone/email. Tracked stand-in: contact.example.tex
+contact.tex
+
+# LaTeX build output
+build/
+
+# LaTeX intermediates (Tectonic keeps these out of the tree, but a stray
+# run without --outdir, or an editor extension, can still drop them here)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.toc
+
+# macOS
+.DS_Store
