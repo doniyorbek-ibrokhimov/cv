@@ -1,0 +1,6 @@
+% SteamFriends - backend framing. Used by the backend CV.
+\begin{resume_employer}{SteamFriends}{Backend Development(Supabase, Deno, PostgreSQL)}{Tashkent}{April 2026 - Present}
+\item Built Steam OpenID 2.0 authentication as a Deno edge function that verifies assertions, upserts Supabase Auth users, and issues JWT plus refresh token pairs.
+\item Implemented a rate-limited Steam API proxy fanning out GetFriendList and batched GetPlayerSummaries calls, throttling each user to one request per 30 seconds via PostgreSQL
+\item Wrote custom JWKS-based JWT validation middleware to support Supabase's ES256 signing keys, and isolated all Steam and service-role secrets server-side via supabase secrets
+\end{resume_employer}

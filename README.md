@@ -2,9 +2,10 @@
 
 My CV, written in LaTeX and built locally with [Tectonic](https://tectonic-typesetting.github.io/).
 
-Two variants are built from one set of sources — **iOS** and **backend / data**.
-They share everything except Work Experience and Personal Projects, so a fix to
-the header, About Me or Education lands in both.
+Three variants are built from one set of sources — **iOS**, **backend / data**,
+and **mixed** (everything). Each job and project is a single file under
+`sections/entries/`, and a CV is an ordered list of the entries it includes. Fix
+a job description once and every CV that lists it picks up the change.
 
 ## Setup
 
@@ -20,11 +21,12 @@ published. If it is missing the build still works — it falls back to
 ## Build
 
 ```bash
-make          # both -> build/cv-ios.pdf, build/cv-backend.pdf
-make ios      # just the iOS one
-make backend  # just the backend one
-make watch    # rebuild both on every save
-make open     # build both, then open them
+make          # all three -> build/cv-{ios,backend,mixed}.pdf
+make ios      # just one variant
+make backend
+make mixed
+make watch    # rebuild all three on every save
+make open     # build all three, then open them
 make clean
 ```
 
@@ -35,18 +37,22 @@ so it takes about a minute. Later builds take a couple of seconds.
 
 | Path | |
 | --- | --- |
-| `cv-ios.tex`, `cv-backend.tex` | document skeletons — one `\input` per section |
+| `cv-ios.tex`, `cv-backend.tex`, `cv-mixed.tex` | document skeletons — one `\input` per section |
 | `preamble.tex` | packages and the `resume_*` environments |
 | `sections/` | shared content: header, About Me, Education |
-| `sections/ios/`, `sections/backend/` | per-variant Work Experience and Personal Projects |
+| `sections/entries/` | **one file per job or project** — where content lives |
+| `sections/ios/`, `backend/`, `mixed/` | ordered `\input` lists selecting entries |
 | `contact.tex` | private contact details (gitignored) |
 
-Where the two CVs genuinely need to differ, the variant file sets a macro rather
-than forking the section — `\interests` supplies the About Me interests line, and
-`\sectionfilbreak` controls whether a section is kept on one page.
+Adding a job to a CV means uncommenting one `\input` line. Where variants need
+different framing of the same thing, there is a second entry file — SteamFriends
+has iOS, backend and full-stack versions. Where one needs different wording in a
+shared section, the variant sets a macro instead of forking the file: `\interests`
+for the About Me line, `\contactextra` to append LinkedIn, `\sectionfilbreak` for
+page-break behaviour, `\ailabminorprojects` for two optional sub-projects.
 
-Sections that are switched off — `volunteer`, `freelance`, `honors` — are
-commented-out `\input` lines in the variant files. Toggle one by uncommenting it.
+Sections switched off — `volunteer`, `freelance`, `honors` — are commented-out
+`\input` lines in the variant files.
 
 Commented-out blocks inside the section files are an archive of past roles and
 alternate phrasings, kept on purpose rather than deleted.

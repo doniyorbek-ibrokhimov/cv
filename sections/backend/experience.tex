@@ -1,92 +1,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-%     WORK EXPERIENCE - START 
+%     WORK EXPERIENCE - START
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+% Order matters. Comment an \input to drop that role from this CV.
 \begin{resume_section}{Work Experience}
 
-% \begin{resume_employer}{\href{https://www.linkedin.com/company/ai-lab-centralasian}{AI Lab}}{iOS Developer (\href{https://github.com/socketio/socket.io-client-swift}{SocketIO}, \href{https://github.com/GetStream/stream-video-swift}{StreamVideo}, Modular Design Pattern)}{Tashkent}{October 2024 - Present}
-% \item Developed chat feature on web sockets using \href{https://github.com/socketio/socket.io-client-swift}{SocketIO}
-% \item Developed video call feature on webrtc using \href{https://github.com/GetStream/stream-video-swift}{StreamVideo}
-% \item Designed and implemented modern, user-friendly interfaces for the \href{https://apps.apple.com/uz/app/cau-puls/id6502046095}{CAU Puls} and \href{https://apps.apple.com/uz/app/eduplus-cau/id6670467558}{EduPlus CAU} apps using SwiftUI, incorporating fluid animations to enhance user engagement.
-%     % \item Developed and optimized networking layers for both apps, enabling seamless data retrieval and synchronization with backend systems, ensuring real-time updates for features like progress tracking and academic performance metrics.
-% \item Developed complex network calls 
-%  \end{resume_employer}
+% \input{sections/entries/ai-lab-ios.tex}
 
- \begin{resume_employer}{\href{https://www.linkedin.com/company/ai-lab-centralasian}{AI Lab}}{AI / Computer Vision
-  Engineer}{Tashkent}{December 2025 - March 2026}
-      \item Built a real-time face-recognition microservice using dlib's CUDA-accelerated CNN detector and 128-dimensional ResNet embeddings, reaching
-  30-60 FPS on GPU by downscaling frames to 25\% and processing every 2nd frame
-      \item Engineered a 28.5 FPS multi-object tracking pipeline with YOLO-E open-vocabulary detection and a custom-tuned BoT-SORT tracker using ReID
-  embeddings and sparseOptFlow motion compensation plus a 90-frame occlusion buffer
-      \item Automated point-of-sale entry by engineering a CHEF/TABLE/SERVANT zone-transition state machine deriving SALE and RETURN events, resolving
-  detected classes to backend food UUIDs and posting JWT-authenticated attributed transactions to a REST backend
-   \end{resume_employer}
+\input{sections/entries/ai-lab-vision.tex}
 
-\begin{resume_employer}{\href{https://www.linkedin.com/company/akfa-group-of-companies}{AKFA Group of Companies}}{Data Analyst (Qlik Sense, SAP)}{Tashkent}{October 2024 - February 2025}
-    \item Retrieve and analyze data from SAP system, ensuring data accuracy and integrity for reporting and visualization purposes
-    \item Design and develop interactive dashboards and complex pivot tables in Qlik Sense, enabling stakeholders to gain actionable insights from complex datasets
-    \item Optimized Qlik Sense app data load scripts by 50-70\% through advanced techniques, including preceding load, optimized load, removal of unused fields, and performance issue resolution using QSDA Pro
-    % \item Collaborate with cross-functional teams to identify data requirements, streamline data extraction processes, and enhance reporting capabilities.
- \end{resume_employer}
+\input{sections/entries/akfa.tex}
 
-%  \begin{resume_section}{Key Projects}
-%   \begin{resume_subsection}{CAU Puls}
-%     \item Developed comprehensive [type of] dashboard for [specific purpose]
-%     \item Integrated [data sources] to provide [specific insights]
-%     \item Improved [specific metric] by [percentage] through [technique]
-%   \end{resume_subsection}
-  
-%   \begin{resume_subsection}{EduPlus}
-%     \item Created [specific feature] that enabled [specific outcome]
-%     \item Automated [process] that reduced [pain point] by [percentage]
-%     \item Implemented [technical feature] that [business benefit]
-%   \end{resume_subsection}
-% \end{resume_section}
+% \input{sections/entries/key-projects.tex}
 
-% https://www.instagram.com/engameschool
-\begin{resume_employer}{\href{https://engame.uz/}{Engame School}} {Telegram Bot Developer (Google Sheets API, OpenAI API)}{Remote}{October 2024 - December 2024}
-  \item Developed an AI-powered \href{https://t.me/engamefridaybot}{English assessment bot} integrating OpenAI's GPT-3.5 for question generation and Whisper for speech-to-text
-  \item Implemented user authentication via Google Sheets, Redis caching, and multi-state conversation management
-  \item Created automated English speaking evaluation system with personalized feedback
-\end{resume_employer}
+\input{sections/entries/engame.tex}
 
-% \begin{resume_employer}{\href{https://uchuymedia.uz}{Uchuy Media}}{iOS Developer (\href{https://github.com/arthenica/ffmpeg-kit}{FFMPEG}, P2P)}{Remote}{June 2024 - October 2024}
-%     \item Developed app which is specialized for streaming, to send or receive media files without a centralized server but between users via P2P
-%     \item Integrated \href{https://github.com/arthenica/ffmpeg-kit}{ffmpeg kit} framework to do operations: streaming back and forth to P2P, encoding, decoding
-%  \end{resume_employer}
+% \input{sections/entries/uchuy.tex}
 
-% \begin{resume_employer}{\href{http://bitsmiths.io}{Bitsmiths}}{iOS Developer (SwiftUI, MVVM, Git, GitHub)}{Remote}{July 2023 - March 2024}
-%   \item Worked in a team of 4 developers
-%   % \item Technology learned: SwiftUI, MVVM Design Pattern
-  
-%  \end{resume_employer}
+% \input{sections/entries/bitsmiths.tex}
 
+\input{sections/entries/artel.tex}
 
-% \begin{resume_employer}{\href{https://www.linkedin.com/company/artelelectronics/}{Artel}: Central Asia’s largest household appliance and electronics manufacturer}{Intern Backend Developer (Python, Django)}{Tashkent}{May 2023 - July 2023}
-\begin{resume_employer}{\href{https://www.linkedin.com/company/artelelectronics/}{Artel}}{Intern Backend Developer (Python, Django)}{Tashkent}{May 2023 - July 2023}
-  \item Developed a back-end system for a university to manage  professors, students, courses, and lecture rooms data
- \end{resume_employer}
+% \input{sections/entries/wss.tex}
 
- % \begin{resume_employer}{WSS Consulting}{CTO and Co-Founder}{Tashkent}{May 2023 - July 2023}
- %  \item Developed a modern and structured system to manage applicant's data.
- %  \item Developed a telegram bot, using Python with Aiogram library, that informs the application process of the clients.
- %  \item Published Google sheets pie-charts that shows the number of applicants who made contracts.
- % \end{resume_employer}
+% \input{sections/entries/upwork.tex}
 
- %  \begin{resume_employer}{\href{https://www.upwork.com/freelancers/~018ad8f0c1b6c76e9c}{Upwork}}{Freelance iOS Developer (Swift, UIKit)}{Remote}{March 2023 - July 2023}
- %  \item Worked on data modeling part of money tracker app: {\href{https://apps.apple.com/uz/app/greenhat-hack-your-finances/id1631715042}{GreenHat}}  
- % \end{resume_employer}
+% \input{sections/entries/apple-atc.tex}
 
-% \begin{resume_employer}{Apple Authorized Training Center for Education at CAU}{Undergraduate Teaching Assistant(iOS Development)}{Tashkent}{November 2022 - May 2023}
-% \item Organized lab sessions for students and helped them build iOS apps with Swift, UIKit framework.
-%   % \item Learned technology stack: Swift, UIKit
-%  \end{resume_employer}
- 
- %  \begin{resume_employer}{The Learning Skills Lab Education Center}{Teaching Assistant}{Namangan}{May 2021 - September 2021}
- %  \item Helped students with course tasks and homework assignments
- %  \item Organized IELTS mock exams for students to test their knowledge and events to learn English actively
- % \end{resume_employer}
- 
+% \input{sections/entries/learning-skills-lab.tex}
+
 \end{resume_section}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-%     WORK EXPERIENCE - END 
+%     WORK EXPERIENCE - END
 %%%%%%%%%%%%%%%%%%%%%%%%%%

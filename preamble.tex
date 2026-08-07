@@ -40,9 +40,17 @@ urlcolor=MyDarkBlue}
 % the default; cv-backend.tex sets this empty, matching its Overleaf original.
 \newcommand{\sectionfilbreak}{\filbreak}
 
+% Appended to the Contacts line. Empty by default; cv-mixed.tex adds LinkedIn.
+\newcommand{\contactextra}{}
+
+% The Cashier and Momento sub-projects inside the AI Lab iOS entry. Off by
+% default; cv-ios.tex switches them on. The mixed CV omits them for length,
+% which is how its Overleaf original had it.
+\newcommand{\ailabminorprojects}{}
+
 % \interests is deliberately NOT defined here. Each variant must define it, so
 % a missing definition is a build error rather than a placeholder that could
-% slip into a PDF you send out. See cv-ios.tex / cv-backend.tex.
+% slip into a PDF you send out. See cv-ios.tex / cv-backend.tex / cv-mixed.tex.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Template Definitions  %

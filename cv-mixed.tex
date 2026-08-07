@@ -1,0 +1,43 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Doniyorbek Ibrokhimov -- CV (mixed / full software development)
+%
+%  Union of the iOS and backend CVs. Layout only; shared content in sections/,
+%  the per-role entries in sections/entries/, the ordering in sections/mixed/.
+%  Build with `make mixed`. Output: build/cv-mixed.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\input{preamble.tex}
+
+\newcommand{\interests}{iOS Development, Data analytics, AI/ML Engineering}
+
+% This variant lets sections split across pages. Its Overleaf original had
+% \filbreak commented out in resume_section; without this the layout shifts.
+\renewcommand{\sectionfilbreak}{}
+
+% Only this variant shows LinkedIn on the Contacts line.
+\renewcommand{\contactextra}{, \contactlinkedin}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{sections/header.tex}
+
+\input{sections/about.tex}
+
+\input{sections/mixed/experience.tex}
+
+% Unlike the other two variants, this one puts Education before Projects.
+\input{sections/education.tex}
+
+% \input{sections/volunteer.tex}
+
+\input{sections/mixed/projects.tex}
+
+% \input{sections/honors.tex}
+
+\end{document}
