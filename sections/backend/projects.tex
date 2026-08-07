@@ -1,0 +1,115 @@
+% PERSONAL PROJECTS
+\begin{resume_section}{Personal Projects}
+
+\begin{resume_employer}{SteamFriends}{Backend Development(Supabase, Deno, PostgreSQL)}{Tashkent}{April 2026 - Present}
+\item Built Steam OpenID 2.0 authentication as a Deno edge function that verifies assertions, upserts Supabase Auth users, and issues JWT plus refresh token pairs.
+\item Implemented a rate-limited Steam API proxy fanning out GetFriendList and batched GetPlayerSummaries calls, throttling each user to one request per 30 seconds via PostgreSQL
+\item Wrote custom JWKS-based JWT validation middleware to support Supabase's ES256 signing keys, and isolated all Steam and service-role secrets server-side via supabase secrets
+\end{resume_employer}
+
+\begin{resume_employer}{Enterprise RAG-Powered Chat Platform}{AI/Backend Development}{Tashkent}{October 2025 - December 2025}
+\item Semantic search system using Qdrant vector store, LangChain document retrieval, and Gemini-powered context-aware responses with conversation history
+\item Multi-tenant architecture with dual authentication (JWT for admins, client secrets for API), role-based access control, agent-to-client assignment, and separate Swagger documentation
+% \item Intelligent document processing with RecursiveCharacterTextSplitter, Gemini embeddings (768D), and vector indexing for semantic search
+\item Configurable AI agent platform with reusable prompt templates, document collections, multi-model support (Gemini, Groq), and usage analytics
+\end{resume_employer}
+
+\begin{resume_employer}{Ga'z Taminot Yordamchi}{AI/Backend Development}{Tashkent}{October 2025 - December 2025}
+
+\textbf{LiveKit Voice AI Agent: Uzbek Language Customer Service Assistant}
+\item 
+\item Custom Uzbek STT integration with external API, streaming/non-streaming modes, WAV conversion, and async HTTP client with trace ID tracking
+\item Complete voice pipeline: GPT-4.1-mini LLM, custom Uzbek STT, Google Gemini TTS with Uzbek pronunciation, and LiveKit AgentSession orchestration
+\item Advanced turn detection using Silero VAD with optimized sensitivity, false interruption detection with resume capabilities, and preemptive generation for reduced latency
+% \item Production infrastructure: Docker with UV package manager, LiveKit Cloud BVC noise cancellation, comprehensive metrics/logging, and pytest evaluation framework
+% \item Hudud Gaz Ta'minot domain specialization with structured conversation flow, emergency handling, and formal Uzbek communication guidelines
+
+\vspace{\projectspacing}
+
+
+\textbf{\href{https://t.me/hgtm_chatbot}{AI Chatbot}: Scalable Telegram bot with analytics and admin management}
+\item External conversation API integration with PostgreSQL session persistence, context-aware messaging, formatted responses with citations, and automatic session creation
+\item Multi-provider analytics (Amplitude, PostHog, Google Analytics), Prometheus metrics, Grafana dashboards, Sentry error tracking, and event decorators
+\item Flask-Admin panel with AdminLTE UI, RBAC, user data export (CSV, XLSX, JSON, YAML), and admin authentication
+% \item Production stack: Docker Compose, PostgreSQL with PgBouncer pooling, Redis caching with decorators, Alembic migrations, and automated backups
+
+\end{resume_employer}
+
+% \begin{resume_employer}{\href{https://github.com/doniyorbek-ibrokhimov/QuakeReady}{QuakeReady}}{iOS Development (SwiftData)}{Tashkent}{February 2025}
+
+% \item Designed an iOS app to help people prepare for and respond to earthquake emergencies
+% \item Features: interactive drills, safety quizzes, and educational content
+
+%  \end{resume_employer}
+
+
+% \begin{resume_employer}{\href{https://github.com/doniyorbek-ibrokhimov/QuakeReady}{QuakeReady}}{iOS Development (SwiftData)}{Tashkent}{February 2025}
+
+% \item Designed an iOS app to help people prepare for and respond to earthquake emergencies
+% \item Features: interactive drills, safety quizzes, and educational content
+
+%  \end{resume_employer}
+
+ \begin{resume_employer}{\href{https://t.me/subscriber_tracker_bot}{SubTrackBot}}{Telegram Bot Development (Aiogram, PostgreSQL, Asyncpg)}{Istanbul}{March 2024 - April 2024}
+ \item Developed a Telegram bot that notifies about channel subscribers activity: joined/left
+ \item Developed a PostgreSQL database to store user data
+ \end{resume_employer}
+
+
+% \begin{resume_subsection}[Tashkent (December 2022)]{\href{https://t.me/letsfood_bot}{Let's Food}}
+%     \begin{subitems}
+%         \item Contributed to the development of a Telegram food ordering bot using Python and the \href{https://aiogram.dev/}{Aiogram} framework.
+%         \item Implemented backend functionalities with Django, integrating payment merchant APIs for secure transaction processing.
+%         \item Managed and optimized PostgreSQL databases, utilizing SQL for efficient data storage and retrieval.
+%         \item Developed webhooks for real-time request handling, enhancing user experience and system responsiveness.
+%     \end{subitems}
+% \end{resume_subsection}
+
+
+% aiogram, backend django, payment merchant api, web hook for request handling, postgreSQL for database management
+
+% \begin{resume_subsection}[Tashkent (July 2023)]{Musico}
+%     \begin{subitems}
+%     \item Built a music player app, that lets users listen to music for free, for iOS with Swift in UIKit framework.
+%     \item Integrated with YouTube and Spotify APIs and let users to import their existing playlists to Musico.
+%     \end{subitems}
+%  \end{resume_subsection}
+
+\begin{resume_employer}{\href{https://drive.google.com/file/d/1yckMHFwHHNBtbgwnOTRsdhVB2KOukAbZ/view?usp=sharing}{Ringo}}{Embedded systems programming(C++, Arduino)}{Tashkent}{May 2023}
+ % \begin{resume_subsection}[Tashkent (May 2023)]{\href{https://drive.google.com/file/d/1yckMHFwHHNBtbgwnOTRsdhVB2KOukAbZ/view?usp=sharing}{Ringo}}
+    % \begin{subitems}
+        \item Participated in the exhibition of the Creative Engineering Design course at CAU and won 2nd place
+        \item Designed a ring remote controller that helps to control the music player of an Android phone
+        \item Designed software for ring in C++ with Arduino framework
+    % \end{subitems}
+\end{resume_employer}
+
+ % \begin{resume_subsection}[Tashkent (July 2022)]{CAU Calculator}
+ %    \begin{subitems}
+ %   % \item accomplished Windows app using C\# which shows the timetable as measured by , %by doing [Z].
+ %        \item Built a Windows app, in C\# using Windows forms, that calculates the overall exam and assignment results relatively 
+ %        %\item Built a complete Windows app using C\# and Windows forms that calculates the overall exam and assignment results %relatively and automatically
+ %    \end{subitems}
+ % \end{resume_subsection}
+
+  % \begin{resume_subsection}[Tashkent (April 2022)]{CAU Timetable}
+  %   \begin{subitems}
+  %   \item Lead a team of 4 members
+  %   %\item Accomplished displaying every day's timetable for students as measured by success by scanning their faces using the deepface library and getting an API from akfa.edupage.org
+  %       \item Built a Windows app, in Python using deepface library, that displays the daily and weekly timetable of a student via facial recognition
+
+  %       \item The app gets the timetable data from akfa.edupage.org
+        
+  %   \end{subitems}
+  % \end{resume_subsection}
+  
+  % \begin{resume_subsection}[Namangan (January 2021)]{District Olympiad in English language}
+  
+  %   \begin{subitems}
+  %       \item Winner of the Olympiad, which was held amongst 11th grade high school students in Namangan district
+  %   \end{subitems}
+    
+  % \end{resume_subsection}
+
+% PERSONAL PROJECTS
+\end{resume_section}

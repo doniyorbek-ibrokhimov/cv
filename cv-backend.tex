@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Doniyorbek Ibrokhimov -- CV (backend / data)
+%
+%  Layout only. Shared content in sections/, backend-only in sections/backend/.
+%  Build with `make backend`. Output: build/cv-backend.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\input{preamble.tex}
+
+\newcommand{\interests}{Data analytics, Backend Development, AI/ML Engineering}
+
+% This variant lets sections split across pages. Its Overleaf original had
+% \filbreak commented out in resume_section; without this the layout shifts.
+\renewcommand{\sectionfilbreak}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{sections/header.tex}
+
+\input{sections/about.tex}
+
+\input{sections/backend/experience.tex}
+
+% \input{sections/volunteer.tex}
+
+\input{sections/backend/projects.tex}
+
+% \input{sections/honors.tex}
+
+\input{sections/education.tex}
+
+\end{document}

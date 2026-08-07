@@ -1,22 +1,30 @@
-MAIN    := cv.tex
-OUTDIR  := build
-PDF     := $(OUTDIR)/cv.pdf
+OUTDIR := build
 
-.PHONY: build watch open clean
+.PHONY: all build ios backend watch open clean
 
-## Compile the CV. Tectonic will not create OUTDIR itself, hence the mkdir.
-build:
+## Build both variants.
+all: ios backend
+build: all
+
+## Tectonic will not create OUTDIR itself, hence the mkdir.
+ios:
 	@mkdir -p $(OUTDIR)
-	tectonic -X compile $(MAIN) --outdir $(OUTDIR)
+	tectonic -X compile cv-ios.tex --outdir $(OUTDIR)
 
-## Rebuild on every save. Ctrl-C to stop.
+backend:
+	@mkdir -p $(OUTDIR)
+	tectonic -X compile cv-backend.tex --outdir $(OUTDIR)
+
+## Rebuild both on every save. Ctrl-C to stop.
 watch:
 	@mkdir -p $(OUTDIR)
-	tectonic -X watch -x "compile $(MAIN) --outdir $(OUTDIR)"
+	tectonic -X watch \
+	  -x "compile cv-ios.tex --outdir $(OUTDIR)" \
+	  -x "compile cv-backend.tex --outdir $(OUTDIR)"
 
-## Open the built PDF in the default viewer.
-open: build
-	open $(PDF)
+## Build both, then open them.
+open: all
+	open $(OUTDIR)/cv-ios.pdf $(OUTDIR)/cv-backend.pdf
 
 clean:
 	rm -rf $(OUTDIR)

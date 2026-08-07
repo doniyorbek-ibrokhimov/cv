@@ -1,13 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-%  Doniyorbek Ibrokhimov -- CV
+%  Doniyorbek Ibrokhimov -- CV (iOS)
 %
-%  Layout only. All content lives in sections/.
-%  Build with `make`. Output: build/cv.pdf
+%  Layout only. Shared content in sections/, iOS-only in sections/ios/.
+%  Build with `make ios`. Output: build/cv-ios.pdf
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass{article}
 
 \input{preamble.tex}
+
+\newcommand{\interests}{AI-Native iOS Development}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Start Document     %
@@ -19,13 +21,13 @@
 
 \input{sections/about.tex}
 
-\input{sections/experience.tex}
+\input{sections/ios/experience.tex}
 
 % \input{sections/volunteer.tex}
 
-% \input{sections/freelance.tex}
+% \input{sections/ios/freelance.tex}
 
-\input{sections/projects.tex}
+\input{sections/ios/projects.tex}
 
 % \input{sections/honors.tex}
 

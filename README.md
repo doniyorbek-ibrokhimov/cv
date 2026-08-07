@@ -2,6 +2,10 @@
 
 My CV, written in LaTeX and built locally with [Tectonic](https://tectonic-typesetting.github.io/).
 
+Two variants are built from one set of sources — **iOS** and **backend / data**.
+They share everything except Work Experience and Personal Projects, so a fix to
+the header, About Me or Education lands in both.
+
 ## Setup
 
 ```bash
@@ -16,9 +20,11 @@ published. If it is missing the build still works — it falls back to
 ## Build
 
 ```bash
-make          # -> build/cv.pdf
-make watch    # rebuild on every save
-make open     # build, then open the PDF
+make          # both -> build/cv-ios.pdf, build/cv-backend.pdf
+make ios      # just the iOS one
+make backend  # just the backend one
+make watch    # rebuild both on every save
+make open     # build both, then open them
 make clean
 ```
 
@@ -29,13 +35,18 @@ so it takes about a minute. Later builds take a couple of seconds.
 
 | Path | |
 | --- | --- |
-| `cv.tex` | document skeleton — one `\input` per section |
+| `cv-ios.tex`, `cv-backend.tex` | document skeletons — one `\input` per section |
 | `preamble.tex` | packages and the `resume_*` environments |
-| `sections/` | all content; edits go here |
+| `sections/` | shared content: header, About Me, Education |
+| `sections/ios/`, `sections/backend/` | per-variant Work Experience and Personal Projects |
 | `contact.tex` | private contact details (gitignored) |
 
+Where the two CVs genuinely need to differ, the variant file sets a macro rather
+than forking the section — `\interests` supplies the About Me interests line, and
+`\sectionfilbreak` controls whether a section is kept on one page.
+
 Sections that are switched off — `volunteer`, `freelance`, `honors` — are
-commented-out `\input` lines in `cv.tex`. Toggle one by uncommenting its line.
+commented-out `\input` lines in the variant files. Toggle one by uncommenting it.
 
 Commented-out blocks inside the section files are an archive of past roles and
 alternate phrasings, kept on purpose rather than deleted.

@@ -32,6 +32,19 @@ urlcolor=MyDarkBlue}
 \pagestyle{empty}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Per-variant knobs    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Overridden by a CV variant after \input{preamble.tex}, before the document.
+
+% Whether a section is kept on a single page where possible. cv-ios.tex takes
+% the default; cv-backend.tex sets this empty, matching its Overleaf original.
+\newcommand{\sectionfilbreak}{\filbreak}
+
+% \interests is deliberately NOT defined here. Each variant must define it, so
+% a missing definition is a build error rather than a placeholder that could
+% slip into a PDF you send out. See cv-ios.tex / cv-backend.tex.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Template Definitions  %
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -64,7 +77,7 @@ urlcolor=MyDarkBlue}
 
 
 \newenvironment{resume_section}[1]{
-  \filbreak
+  \sectionfilbreak
   \vspace{2\secsep}
   \textsc{\large#1}
   \lineunder
