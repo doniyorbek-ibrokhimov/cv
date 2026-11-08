@@ -9,7 +9,7 @@
 
 Hi wynwood tech team,
 
-Earliest start: immediately. Capacity: [30+ hrs/week], CET overlap is no problem (Tashkent is CET+4).
+Earliest start: immediately. Capacity: 20-30 hrs/week, CET overlap is no problem (Tashkent is CET+4).
 CV attached.
 
 Self-assessment:
