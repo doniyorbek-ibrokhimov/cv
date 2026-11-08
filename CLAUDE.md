@@ -42,7 +42,8 @@ pdfLaTeX-specific (`\pdf...` primitives, `inputenc` tricks) will not work here.
 A CV tailored to one application is `jobs/<slug>.tex` (skeleton, header comment
 naming the job and what it asks for) plus `sections/jobs/<slug>/` (its skills,
 experience and projects lists). `make jobs` builds every one to
-`build/jobs/<slug>.pdf`; `make` includes them.
+`build/jobs/<slug>.pdf`; `make` includes them. The proposal text sent with it
+lives beside the skeleton as `jobs/<slug>-cover-letter.md`.
 
 - Start from the closest variant (`cv-ios.tex` for iOS roles). Reuse shared
   entries by `\input` wherever the wording already fits.
