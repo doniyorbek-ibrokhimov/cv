@@ -1,0 +1,42 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Doniyorbek Ibrokhimov -- CV tailored for one job application
+%
+%  Job:    iOS Engineers - 100% remote, ASAP, 6+ months (Upwork, Nov 2026)
+%  Client: wynwood tech (recruiting agency) for a European digital agency
+%  Asks:   Swift + Objective-C, UIKit/SwiftUI/Auto Layout, MVVM/Clean,
+%          Xcode Instruments, XCTest, event booking / admin products.
+%
+%  Built from the iOS CV. Job-specific sections live in
+%  sections/jobs/wynwood-ios/. Build with `make jobs`.
+%  Output: build/jobs/wynwood-ios.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\input{preamble.tex}
+
+\newcommand{\interests}{AI-Native iOS Development}
+
+% Let sections break across pages, as cv-backend.tex and cv-mixed.tex do.
+% With the default \filbreak, Personal Projects moves whole onto page 3.
+\renewcommand{\sectionfilbreak}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Start Document     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{sections/header.tex}
+
+\input{sections/about.tex}
+
+\input{sections/jobs/wynwood-ios/skills.tex}
+
+\input{sections/jobs/wynwood-ios/experience.tex}
+
+\input{sections/jobs/wynwood-ios/projects.tex}
+
+\input{sections/education.tex}
+
+\end{document}

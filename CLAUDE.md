@@ -9,6 +9,7 @@ Personal CV for Doniyorbek Ibrokhimov. Ported from Overleaf, built locally with 
 
 - `make` builds all three: `build/cv-ios.pdf`, `cv-backend.pdf`, `cv-mixed.pdf`.
 - `make ios` / `make backend` / `make mixed` build one; `make watch` rebuilds all.
+- `make jobs` builds every per-job CV to `build/jobs/` (see Per-job CVs below).
 - **After any `.tex` edit, run `make` and confirm exit 0 before reporting done.**
   Most content is shared — an edit usually lands in more than one PDF. Check all.
 - Never edit anything in `build/` — it is generated and gitignored.
@@ -35,6 +36,23 @@ pdfLaTeX-specific (`\pdf...` primitives, `inputenc` tricks) will not work here.
   `projects.tex`, each just an **ordered list of `\input` lines**. No prose.
 - `contact.tex` — **gitignored**, holds the real phone/email as `\contactdetails`.
   `contact.example.tex` is the tracked stand-in that keeps a fresh clone building.
+
+### Per-job CVs
+
+A CV tailored to one application is `jobs/<slug>.tex` (skeleton, header comment
+naming the job and what it asks for) plus `sections/jobs/<slug>/` (its skills,
+experience and projects lists). `make jobs` builds every one to
+`build/jobs/<slug>.pdf`; `make` includes them.
+
+- Start from the closest variant (`cv-ios.tex` for iOS roles). Reuse shared
+  entries by `\input` wherever the wording already fits.
+- Reframing an entry for one job: copy it into `sections/jobs/<slug>/` and edit
+  the copy there. The canonical entry in `sections/entries/` stays untouched,
+  so a job CV never changes the main variants.
+- Only claim what the author's work backs up. Before adding a skill the job asks
+  for, look for evidence in `~/Development` projects (tests, features, commits);
+  if there is none, ask the author rather than writing it in.
+- Length: 2 pages, like the iOS and backend CVs.
 
 ### The entry model
 

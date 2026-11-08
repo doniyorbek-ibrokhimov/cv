@@ -25,6 +25,7 @@ make          # all three -> build/cv-{ios,backend,mixed}.pdf
 make ios      # just one variant
 make backend
 make mixed
+make jobs     # every per-job CV -> build/jobs/<slug>.pdf
 make watch    # rebuild all three on every save
 make open     # build all three, then open them
 make clean
@@ -43,6 +44,12 @@ so it takes about a minute. Later builds take a couple of seconds.
 | `sections/entries/` | **one file per job or project** — where content lives |
 | `sections/ios/`, `backend/`, `mixed/` | ordered `\input` lists selecting entries |
 | `contact.tex` | private contact details (gitignored) |
+| `jobs/<slug>.tex` | a CV tailored to one job application |
+| `sections/jobs/<slug>/` | that job's section lists and reframed entries |
+
+A per-job CV starts from the closest variant, reuses shared entries where they
+fit, and keeps any entry reworded for that job inside its own folder, so the
+main variants never change because of one application.
 
 Adding a job to a CV means uncommenting one `\input` line. Where variants need
 different framing of the same thing, there is a second entry file — SteamFriends
